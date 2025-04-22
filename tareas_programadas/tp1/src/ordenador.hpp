@@ -89,8 +89,6 @@ void Ordenador::mezcla(int* A, int l, int m, int r) const {
   delete[] L;
   delete[] R;
 }
-
-
 void Ordenador::mergeSort(int* A, int l, int r) const {
   if (l < r) {
       int m = l + (r - l) / 2;
@@ -99,7 +97,6 @@ void Ordenador::mergeSort(int* A, int l, int r) const {
       mezcla(A, l, m, r);
   }
 }
-
 void Ordenador::heapify(int* A, int n, int i) const {
   int largest = i;
   int l = 2 * i + 1;
@@ -116,7 +113,6 @@ void Ordenador::heapify(int* A, int n, int i) const {
       heapify(A, n, largest);
   }
 }
-
 int Ordenador::partition(int* A, int low, int high) const {
   int pivot = A[high];
   int i = low - 1;
@@ -139,12 +135,34 @@ if (low < high) {
     quickSort(A, pi + 1, high);
 }
 }
-
+void Ordenador::ordenamientoPorSeleccion(int *A, int n) const {
+  if (!A || n <= 0) return;
+  for (int i = 0; i < n - 1; ++i) {
+      int minIdx = i;
+      for (int j = i + 1; j < n; ++j) {
+          if (A[j] < A[minIdx]) {
+              minIdx = j;
+          }
+      }
+      std::swap(A[i], A[minIdx]);
+  }
+}
+void Ordenador::ordenamientoPorInserccion(int *A, int n) const {
+  if (!A || n <= 0) return;
+  for (int i = 1; i < n; ++i) {
+      int key = A[i];
+      int j = i - 1;
+      while (j >= 0 && A[j] > key) {
+          A[j + 1] = A[j];
+          --j;
+      }
+      A[j + 1] = key;
+  }
+}
 void Ordenador::ordenamientoPorMezcla(int *A, int n) const {
   if (!A || n <= 0) return;
   mergeSort(A, 0, n - 1);
 }
-
 void Ordenador::ordenamientoPorMonticulos(int *A, int n) const {
   if (!A || n <= 0) return;
   for (int i = n / 2 - 1; i >= 0; --i)
@@ -154,10 +172,34 @@ void Ordenador::ordenamientoPorMonticulos(int *A, int n) const {
       heapify(A, i, 0);
   }
 }
-
 void Ordenador::ordenamientoRapido(int *A, int n) const {
   if (!A || n <= 0) return;
   quickSort(A, 0, n - 1);
 }
+void Ordenador::ordenamientoPorResiduos(int *A, int n) const {
+  if (!A || n <= 0) return;
 
+  int maxVal = A[0];
+  for (int i = 1; i < n; ++i)
+      if (A[i] > maxVal) maxVal = A[i];
+
+  for (int exp = 1; maxVal / exp > 0; exp *= 10) {
+      int output[n];
+      int count[10] = {0};
+
+      for (int i = 0; i < n; ++i)
+          count[(A[i] / exp) % 10]++;
+
+      for (int i = 1; i < 10; ++i)
+          count[i] += count[i - 1];
+
+      for (int i = n - 1; i >= 0; --i) {
+          output[count[(A[i] / exp) % 10] - 1] = A[i];
+          count[(A[i] / exp) % 10]--;
+      }
+
+      for (int i = 0; i < n; ++i)
+          A[i] = output[i];
+  }
+}
 #endif // ORDENADOR_HPP
