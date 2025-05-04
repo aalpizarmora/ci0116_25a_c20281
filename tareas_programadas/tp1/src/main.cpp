@@ -15,7 +15,6 @@ void actualizarArreglo(int* A, int n) {
     for (int i = 0; i < n; ++i)
         A[i] = rand() % 100; // número aleatorio de 0 a 99
 }
-
 int main() {
     Ordenador* ordenador = new Ordenador();
     
@@ -40,11 +39,11 @@ int main() {
             // Medir el tiempo de ejecución del algoritmo
             auto inicio = std::chrono::high_resolution_clock::now();
             //ordenador->ordenamientoPorInserccion(miArray, tam);  // Aquí cambiar por otros algoritmos
-            //ordenador->ordenamientoPorSeleccion(miArray, tam);
+            ordenador->ordenamientoPorSeleccion(miArray, tam);
             //ordenador->ordenamientoPorMezcla(miArray, tam);
             //ordenador->ordenamientoPorMonticulos(miArray, tam);
             //ordenador->ordenamientoRapido(miArray, tam);
-            ordenador->ordenamientoPorResiduos(miArray, tam);
+            //ordenador->ordenamientoPorResiduos(miArray, tam);
             auto fin = std::chrono::high_resolution_clock::now();
 
             std::chrono::duration<double> duracion = fin - inicio;
