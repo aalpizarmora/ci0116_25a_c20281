@@ -3,7 +3,8 @@
         {
             "name": "Linux",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/tareas_programadas/tp1/src"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",
