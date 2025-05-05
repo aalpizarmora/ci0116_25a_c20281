@@ -5,7 +5,6 @@
 #include <utility>
 #include <cmath>
 
-
 /*
 Credits
 Author: Prof. Arturo Camacho, Universidad de Costa Rica
@@ -14,44 +13,72 @@ Modified by: Prof. Allan Berrocal, Universidad de Costa Rica
 */
 
 class Ordenador {
-    private:
-    // Defina aqui los metodos auxiliares de los algoritmos de ordenamiento solamente.
-    // Puede definir cuantos metodos quiera.
-      
-      // Metodo auxiliar para el ordenamiento por mezcla
-      void mezcla(int* A, int l, int m, int r) const;
-      void mergeSort(int* A, int l, int r) const;
+private:
+    // Métodos auxiliares de ordenamiento
 
-      // Metodo auxiliar para el ordenamiento por monticulos
-      void heapify(int* A, int n, int i) const;
+    /**
+     * @brief Realiza la mezcla de dos subarreglos ordenados.
+     */
+    void mezcla(int* A, int l, int m, int r) const;
 
-      // Metodo auxiliar para el ordenamiento rapido
-      int partition(int* A, int low, int high) const;
-      void quickSort(int* A, int low, int high) const;
+    /**
+     * @brief Implementa el algoritmo merge sort.
+     */
+    void mergeSort(int* A, int l, int r) const;
 
-      // Metodo auxiliar para el ordenamiento por residuos
-      void counting_sort(int* A, int block_size, int num_blocks, int n) const;
-      
-    public:
+    /**
+     * @brief Reorganiza el subárbol para mantener la propiedad de montículo.
+     */
+    void heapify(int* A, int n, int i) const;
+
+    /**
+     * @brief Reorganiza los elementos alrededor de un pivote.
+     */
+    int partition(int* A, int low, int high) const;
+
+    /**
+     * @brief Implementa el algoritmo quick sort.
+     */
+    void quickSort(int* A, int low, int high) const;
+
+    /**
+     * @brief Algoritmo auxiliar para ordenamiento por residuos (radix sort).
+     */
+    void counting_sort(int* A, int block_size, int num_blocks, int n) const;
+
+public:
     Ordenador() = default;
     ~Ordenador() = default;
 
-    /* Nota:
-     - Si no planea implementar algunos de los métodos de ordenamiento, no los borre.
-     - Simplemente déjelos con el cuerpo vacío para evitar errores de compilación, ya
-       que se ejecutará el mismo main para todas las tareas.
-     - Recuerde hacer uso de programación defensiva y documentar los métodos con formato Doxygen, por ejemplo.
-     - No cambié la firma de los métodos de la clase Ordenador.
-     - No lance excepciones para el manejo de errores.
-       Ante un error, basta con que el método no modifique el arreglo original y que no cause la caída del programa.
-    */ 
+    /**
+     * @brief Ordena un arreglo utilizando el algoritmo de selección.
+     */
     void ordenamientoPorSeleccion(int *A, int n) const;
-    void ordenamientoPorInserccion(int *A, int n) const;
-    void ordenamientoPorMezcla(int *A, int n) const;
-    void ordenamientoPorMonticulos(int *A, int n) const;
-    void ordenamientoRapido(int *A, int n) const;
-    void ordenamientoPorResiduos(int *A, int n) const;
 
+    /**
+     * @brief Ordena un arreglo utilizando el algoritmo de inserción.
+     */
+    void ordenamientoPorInserccion(int *A, int n) const;
+
+    /**
+     * @brief Ordena un arreglo utilizando el algoritmo de mezcla (merge sort).
+     */
+    void ordenamientoPorMezcla(int *A, int n) const;
+
+    /**
+     * @brief Ordena un arreglo utilizando el algoritmo de montículos (heap sort).
+     */
+    void ordenamientoPorMonticulos(int *A, int n) const;
+
+    /**
+     * @brief Ordena un arreglo utilizando el algoritmo rápido (quick sort).
+     */
+    void ordenamientoRapido(int *A, int n) const;
+
+    /**
+     * @brief Ordena un arreglo utilizando el algoritmo de residuos (radix sort).
+     */
+    void ordenamientoPorResiduos(int *A, int n) const;
 
     /**
      * @brief Retorna un std::string con los datos de la tarea.
@@ -61,7 +88,7 @@ class Ordenador {
      * @return std::string Una cadena de texto con los datos de la tarea.
      */
     constexpr const char* imprimirDatosDeTarea() const {
-      return "Carné: C20281, Nombre: Alexa Alpízar Mora, Tarea 1";
+        return "Carné: C20281, Nombre: Alexa Alpízar Mora, Tarea 1";
     }
 };
 
