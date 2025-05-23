@@ -1,54 +1,89 @@
-/*
- Credits
- Based on: Prof. Arturo Camacho, Universidad de Costa Rica
- Modified by: Prof. Allan Berrocal, Universidad de Costa Rica
-*/
+#include "SinglyLinkedList.hpp"
 
-#pragma once
-template <typename DataType>
-class SLList;
+// Implementación de SLListNode
 
 template <typename DataType>
-class SLListNode {
- public:
-  friend class SLList<DataType>;
-
-  SLListNode();
-
-  SLListNode(const DataType& value, SLListNode<DataType>* next = nullptr);
-
-  ~SLListNode();
-
-  DataType getKey() const;
-
-  SLListNode<DataType>* getNext() const;
-
-  void setKey(DataType key);
-
-  void setNext(SLListNode<DataType>* newNode);
-
- private:
-  DataType key;
-
-  SLListNode<DataType>* next;
-};
+SLListNode<DataType>::SLListNode() : key(DataType()), next(nullptr) {}
 
 template <typename DataType>
-class SLList {
- public:
-  SLList() = default;
+SLListNode<DataType>::SLListNode(const DataType& value, SLListNode<DataType>* next) 
+    : key(value), next(next) {}
 
-  ~SLList() {};
+template <typename DataType>
+SLListNode<DataType>::~SLListNode() {}
 
-  void insert(const DataType& value);
+template <typename DataType>
+DataType SLListNode<DataType>::getKey() const {
+    return key;
+}
 
-  SLListNode<DataType>* search(const DataType& value) const;
+template <typename DataType>
+SLListNode<DataType>* SLListNode<DataType>::getNext() const {
+    return next;
+}
 
-  void remove(const DataType& value);
+template <typename DataType>
+void SLListNode<DataType>::setKey(DataType key) {
+    this->key = key;
+}
 
-  SLListNode<DataType>* getNil() const;
-  
- private:
-  SLListNode<DataType>* nil;
+template <typename DataType>
+void SLListNode<DataType>::setNext(SLListNode<DataType>* newNode) {
+    next = newNode;
+}
 
-};
+// Implementación de SLList
+
+template <typename DataType>
+SLList<DataType>::SLList() {
+    nil = new SLListNode<DataType>();
+    nil->setNext(nil); // Apunta a sí mismo inicialmente
+}
+
+template <typename DataType>
+SLList<DataType>::~SLList() {
+    SLListNode<DataType>* current = nil->getNext();
+    while (current != nil) {
+        SLListNode<DataType>* toDelete = current;
+        current = current->getNext();
+        delete toDelete;
+    }
+    delete nil;
+}
+
+template <typename DataType>
+void SLList<DataType>::insert(const DataType& value) {
+    // Insertar al principio de la lista (después de nil)
+    SLListNode<DataType>* newNode = new SLListNode<DataType>(value, nil->getNext());
+    nil->setNext(newNode);
+}
+
+template <typename DataType>
+SLListNode<DataType>* SLList<DataType>::search(const DataType& value) const {
+    SLListNode<DataType>* current = nil->getNext();
+    while (current != nil && current->getKey() != value) {
+        current = current->getNext();
+    }
+    return (current != nil) ? current : nullptr;
+}
+
+template <typename DataType>
+void SLList<DataType>::remove(const DataType& value) {
+    SLListNode<DataType>* prev = nil;
+    SLListNode<DataType>* current = nil->getNext();
+    
+    while (current != nil && current->getKey() != value) {
+        prev = current;
+        current = current->getNext();
+    }
+    
+    if (current != nil) { // Encontramos el nodo
+        prev->setNext(current->getNext());
+        delete current;
+    }
+}
+
+template <typename DataType>
+SLListNode<DataType>* SLList<DataType>::getNil() const {
+    return nil;
+}

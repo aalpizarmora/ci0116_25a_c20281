@@ -83,4 +83,11 @@ class RBTree {
   RBTreeNode<DataType> *root;
 
   RBTreeNode<DataType> *nil;
+
+   // Métodos auxiliares privados
+  void leftRotate(RBTreeNode<DataType> *x);
+  void rightRotate(RBTreeNode<DataType> *y);
+  void insertFixup(RBTreeNode<DataType> *z);
+  void deleteFixup(RBTreeNode<DataType> *x);
+  void transplant(RBTreeNode<DataType> *u, RBTreeNode<DataType> *v);
 };

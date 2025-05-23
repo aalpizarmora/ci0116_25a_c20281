@@ -2,7 +2,7 @@
  Credits
  Based on: Prof. Arturo Camacho, Universidad de Costa Rica
  Modified by: Prof. Allan Berrocal, Universidad de Costa Rica
- */
+*/
 
 #pragma once
 #include <cstddef>

@@ -1,6 +1,6 @@
 # ci0116_25a_c20281# 
 
-Homework 1
+Homework 2
 
 ## Student:
 - Alexa Alpízar Mora, C20281
@@ -21,7 +21,7 @@ To compile this code, first make sure you have installed:
 
 ### Task Description
 
-The main objective is to implement the sorting algorithms studied in the course and gather information about their actual performance. Then, analyze the results and reflect on their theoretical efficiency as well as the observed efficiency.
+The objective of the assignment is to implement some of the data structures studied in the course in order to conduct experiments with these structures and their corresponding operations. During the experimental phase, information about the performance of the algorithms should be collected. The student is expected to analyze the results, reflect on them, and compare the theoretical efficiency of the data structures and their algorithms with the efficiency observed during the experiments.
 
 
 ### How to use it
@@ -62,7 +62,7 @@ Open the Visual Studio terminal and run(for example):
 ```bash
   make clean
   make
-  bin/tp1
+  bin/tp2
   
 ```
 ## Credits
