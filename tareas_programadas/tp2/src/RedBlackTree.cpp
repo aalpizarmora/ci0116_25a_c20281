@@ -67,20 +67,6 @@ void RBTreeNode<DataType>::setRight(RBTreeNode<DataType> *right) {
 // Implementation of RBTree
 
 template <typename DataType>
-RBTree<DataType>::RBTree() {
-    nil = new RBTreeNode<DataType>();
-    nil->color = BLACK;
-    nil->left = nil->right = nil->parent = nil;
-    root = nil;
-}
-
-template <typename DataType>
-RBTree<DataType>::~RBTree() {
-    if (root != nil) delete root;
-    delete nil;
-}
-
-template <typename DataType>
 void RBTree<DataType>::insert(const DataType &value) {
     RBTreeNode<DataType> *z = new RBTreeNode<DataType>(value, nil, nil, nil, RED);
     RBTreeNode<DataType> *y = nil;

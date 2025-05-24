@@ -8,19 +8,6 @@
 #include <stdexcept>
 
 template <typename DataType>
-ChainedHashTable<DataType>::ChainedHashTable(size_t size) : size(size) {
-    if (size == 0) {
-        throw std::invalid_argument("Table size must be greater than 0");
-    }
-    table.resize(size);
-}
-
-template <typename DataType>
-ChainedHashTable<DataType>::~ChainedHashTable() {
-    // El vector y las listas se destruyen automáticamente
-}
-
-template <typename DataType>
 void ChainedHashTable<DataType>::insert(const DataType& value) {
     size_t index = value % size; // Función hash h(k) = k mod m
     table[index].insert(value); // Insertar en la lista correspondiente

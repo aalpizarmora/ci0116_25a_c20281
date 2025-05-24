@@ -41,24 +41,6 @@ void DLListNode<DataType>::setNext(DLListNode<DataType>* next) {
 // Implementation of DLList
 
 template <typename DataType>
-DLList<DataType>::DLList() {
-    nil = new DLListNode<DataType>();
-    nil->setNext(nil);
-    nil->setPrev(nil);
-}
-
-template <typename DataType>
-DLList<DataType>::~DLList() {
-    DLListNode<DataType>* current = nil->getNext();
-    while (current != nil) {
-        DLListNode<DataType>* toDelete = current;
-        current = current->getNext();
-        delete toDelete;
-    }
-    delete nil;
-}
-
-template <typename DataType>
 void DLList<DataType>::insert(const DataType& value) {
     // Insert at the beginning of the list (after nil)
     DLListNode<DataType>* newNode = new DLListNode<DataType>(value, nil->getNext(), nil);

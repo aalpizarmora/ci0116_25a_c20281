@@ -34,19 +34,21 @@ void SLListNode<DataType>::setNext(SLListNode<DataType>* newNode) {
 
 // Implementación de SLList
 
+// Implementar constructor por defecto
 template <typename DataType>
 SLList<DataType>::SLList() {
     nil = new SLListNode<DataType>();
-    nil->setNext(nil); // Apunta a sí mismo inicialmente
+    nil->setNext(nil);
 }
 
+// Implementar destructor
 template <typename DataType>
 SLList<DataType>::~SLList() {
     SLListNode<DataType>* current = nil->getNext();
     while (current != nil) {
-        SLListNode<DataType>* toDelete = current;
+        SLListNode<DataType>* temp = current;
         current = current->getNext();
-        delete toDelete;
+        delete temp;
     }
     delete nil;
 }
@@ -87,3 +89,5 @@ template <typename DataType>
 SLListNode<DataType>* SLList<DataType>::getNil() const {
     return nil;
 }
+
+template class SLList<int>;

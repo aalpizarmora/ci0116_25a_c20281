@@ -35,9 +35,9 @@ class SLListNode {
 template <typename DataType>
 class SLList {
  public:
-  SLList() = default;
+  SLList();
 
-  ~SLList() {};
+  ~SLList();
 
   void insert(const DataType& value);
 

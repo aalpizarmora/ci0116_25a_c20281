@@ -69,14 +69,6 @@ void BSTreeNode<DataType>::setRight(BSTreeNode<DataType> *right) {
 // Implementation of BSTree
 
 template <typename DataType>
-BSTree<DataType>::BSTree() : root(nullptr) {}
-
-template <typename DataType>
-BSTree<DataType>::~BSTree() {
-    if (root != nullptr) delete root;
-}
-
-template <typename DataType>
 void BSTree<DataType>::insert(const DataType &value) {
     BSTreeNode<DataType> *newNode = new BSTreeNode<DataType>(value);
     BSTreeNode<DataType> *y = nullptr;
