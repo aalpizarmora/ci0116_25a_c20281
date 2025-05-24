@@ -24,10 +24,17 @@ int main() {
     auto start_insert = std::chrono::high_resolution_clock::now();
 
     for (int i = 0; i < n; ++i) {
+        list.insert(i);  // Insertar en orden ascendente
+    }
+
+    /*
+    for (int i = 0; i < n; ++i) {
         int random_value = std::rand() % range;
         list.insert(random_value);
         // Insert random value into the list
     }
+        */
+    // Insert random values into the list
 
     auto end_insert = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> insert_time = end_insert - start_insert;
@@ -40,7 +47,7 @@ int main() {
     for (int i = 0; i < o; ++i) {
         int random_value = std::rand() % range;
         list.search(random_value); 
-        // Search for random value in the list
+        // Search for random_value in the list
     }
 
     auto end_search = std::chrono::high_resolution_clock::now();
