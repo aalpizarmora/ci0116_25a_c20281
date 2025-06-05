@@ -2,105 +2,109 @@
 
 // Implementation of SLListNode
 
-// Default constructor: initializes key with default value and next as nullptr
 template <typename DataType>
-SLListNode<DataType>::SLListNode() : key(DataType()), next(nullptr) {}
+SLListNode<DataType>::SLListNode() : key(DataType()), next(nullptr) {}  
+// Default constructor, empty key and next nullptr
 
-// Constructor with given key and next pointer
 template <typename DataType>
 SLListNode<DataType>::SLListNode(const DataType& value, SLListNode<DataType>* next) 
-    : key(value), next(next) {}
+    : key(value), next(next) {}  
+    // Constructor with data and next node pointer
 
-// Destructor
 template <typename DataType>
-SLListNode<DataType>::~SLListNode() {}
+SLListNode<DataType>::~SLListNode() {} 
+    // Destructor
 
-// Returns the key (data) stored in the node
 template <typename DataType>
 DataType SLListNode<DataType>::getKey() const {
     return key;
+    // Returns the stored data
 }
 
-// Returns the pointer to the next node
 template <typename DataType>
 SLListNode<DataType>* SLListNode<DataType>::getNext() const {
     return next;
+    // Returns the pointer to next node
 }
 
-// Sets the key (data) of the node
 template <typename DataType>
 void SLListNode<DataType>::setKey(DataType key) {
     this->key = key;
+    // Sets the stored data
 }
 
-// Sets the next pointer of the node
 template <typename DataType>
 void SLListNode<DataType>::setNext(SLListNode<DataType>* newNode) {
     next = newNode;
+    // Sets the pointer to the next node
 }
 
 // Implementation of SLList
 
-// Constructor: creates an empty list with sentinel node
 template <typename DataType>
 SLList<DataType>::SLList() {
     nil = new SLListNode<DataType>();
-    nil->setNext(nil);  // sentinel node points to itself
+    // Create sentinel node
+    nil->setNext(nil);
+    // nil points to itself (empty list)
 }
 
-// Destructor: deletes all nodes including sentinel
 template <typename DataType>
 SLList<DataType>::~SLList() {
     SLListNode<DataType>* current = nil->getNext();
+    // Traverse and delete all nodes except nil
     while (current != nil) {
         SLListNode<DataType>* temp = current;
         current = current->getNext();
         delete temp;
     }
     delete nil;
+    // Delete sentinel node
 }
 
-// Inserts a new node with the given value at the front of the list
 template <typename DataType>
 void SLList<DataType>::insert(const DataType& value) {
+    // Insert new node right after nil (at the front)
     SLListNode<DataType>* newNode = new SLListNode<DataType>(value, nil->getNext());
     nil->setNext(newNode);
 }
 
-// Searches for a node with the given value
 template <typename DataType>
 SLListNode<DataType>* SLList<DataType>::search(const DataType& value) const {
     SLListNode<DataType>* current = nil->getNext();
+    // Search for node with given value
     while (current != nil && current->getKey() != value) {
         current = current->getNext();
     }
     return (current != nil) ? current : nullptr;
+    // Return node or nullptr if not found
 }
 
-// Removes all nodes with the given value
 template <typename DataType>
 void SLList<DataType>::remove(const DataType& value) {
     SLListNode<DataType>* prev = nil;
     SLListNode<DataType>* current = nil->getNext();
-
-    while (current != nil) {
-        if (current->getKey() == value) {
-            SLListNode<DataType>* toDelete = current;
-            current = current->getNext();
-            prev->setNext(current);
-            delete toDelete;
-        } else {
-            prev = current;
-            current = current->getNext();
-        }
+    
+    // Find node to remove and its previous node
+    while (current != nil && current->getKey() != value) {
+        prev = current;
+        current = current->getNext();
+    }
+    
+    if (current != nil) {
+        // If found the node
+        prev->setNext(current->getNext());
+        // Bypass the node
+        delete current;
+        // Free memory
     }
 }
 
-// Returns the sentinel node
 template <typename DataType>
 SLListNode<DataType>* SLList<DataType>::getNil() const {
     return nil;
+    // Return the sentinel node
 }
 
-// Explicit instantiation of SLList for int type
 template class SLList<int>;
+// Explicit instantiation for int

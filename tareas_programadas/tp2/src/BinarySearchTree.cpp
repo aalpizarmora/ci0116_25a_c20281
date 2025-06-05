@@ -185,6 +185,7 @@ void BSTree<DataType>::inorderWalk(BSTreeNode<DataType>* rootOfSubtree) const {
     }
 }
 
+
 // Pre-order traversal: root, left, right
 template <typename DataType>
 void BSTree<DataType>::preorderWalk(BSTreeNode<DataType> *rootOfSubtree) const {
@@ -285,7 +286,7 @@ BSTreeNode<DataType>* BSTree<DataType>::buildBalancedSubtree(DataType start, Dat
 // Insert n sequential values [0, n-1] into a balanced BST
 template <typename DataType>
 void BSTree<DataType>::fastInsert(size_t n) {
-    delete root;
+    if (root != nullptr) delete root;
     root = nullptr;
     if (n > 0) {
         root = buildBalancedSubtree(static_cast<DataType>(0), 

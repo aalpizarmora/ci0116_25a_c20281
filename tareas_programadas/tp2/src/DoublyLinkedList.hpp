@@ -43,9 +43,9 @@ class DLListNode {
 template <typename DataType>
 class DLList {
  public:
-  DLList() = default;
+  DLList() ;
 
-  ~DLList() {};
+  ~DLList() ;
 
   void insert(const DataType& value);
 

@@ -25,7 +25,7 @@ class BSTreeNode {
   friend class BSTree<DataType>;
 
   /// @brief Default constructor.
-  BSTreeNode() = default;
+  BSTreeNode();
 
   /**
    * @brief Constructor with parameters.
@@ -86,10 +86,10 @@ template <typename DataType>
 class BSTree {
  public:
   /// @brief Default constructor.
-  BSTree() = default;
+  BSTree();
 
   /// @brief Destructor.
-  ~BSTree() {};
+  ~BSTree();
 
   /**
    * @brief Inserts a value into the BST.

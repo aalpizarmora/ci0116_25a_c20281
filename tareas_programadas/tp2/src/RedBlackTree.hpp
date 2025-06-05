@@ -31,7 +31,7 @@ class RBTreeNode {
   /**
    * @brief Default constructor.
    */
-  RBTreeNode() = default;
+  RBTreeNode();
 
   /**
    * @brief Parameterized constructor.
@@ -118,12 +118,12 @@ class RBTree {
   /**
    * @brief Constructor.
    */
-  RBTree() = default;
+  RBTree();
 
   /**
    * @brief Destructor.
    */
-  ~RBTree() {};
+  ~RBTree();
 
   /**
    * @brief Insert a value into the tree.

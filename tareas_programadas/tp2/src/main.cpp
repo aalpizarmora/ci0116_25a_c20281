@@ -2,82 +2,104 @@
 #include <cstdlib>
 #include <ctime>
 #include <chrono>
-#include "ChainedHashTable.hpp"
 
-//#include "BinarySearchTree.hpp"
-//#include "SinglyLinkedList.hpp"
+// 1. Structures to collect data
+
+#include "SinglyLinkedList.hpp"
+// #include "BinarySearchTree.hpp"
+// #include "RedBlackTree.hpp"
+// #include "ChainedHashTable.hpp"
+#include "Student.hpp"
 
 int main() {
-    const int n = 1000000;
-    // Number of nodes to insert
+    std::cout << imprimirDatosDeTarea() << "\n\n";
+    
+    const int n = 1000000;   // Number of insertions
+    const int o = 10000;     // Number of searches and deletions
+    const int range = 3 * n; // Range for generating random values
 
-    const int o = 10000;
-    // Number of searches and removals
+    const bool insercion_ordenada = false;
+    // 2. Set to true to insert in ascending order from 0 to n-1
+    //    Set to false to insert random values
 
-    const int range = 3 * n;
-    // Range of values from 0 to 3*n - 1
+    std::srand(std::time(nullptr));  // Random seed
 
-    // Seed the random number generator with current time
-    std::srand(std::time(nullptr));
+    // 3. Select the data structure to collect:
 
-    // 1. Create an empty list and insert n random values
-    // or a  RBTree<int> tree;
+     std::cout << "Active structure: Singly Linked List (SLList)" << std::endl;
+     SLList<int> lista;
+
+    // std::cout << "Active structure: Binary Search Tree (BSTree)" << std::endl;
     // BSTree<int> tree;
-    ChainedHashTable<int> table(n);
-    
 
-    std::cout << "Se insertan " << n << " nodos." << std::endl;
-    std::chrono::high_resolution_clock::time_point start_insert = std::chrono::high_resolution_clock::now();
+    // std::cout << "Active structure: Red-Black Tree (RBTree)" << std::endl;
+    // RBTree<int> rbtree;
 
-    //tree.fastInsert(n);
+    // std::cout << "Active structure: Chained Hash Table" << std::endl;
+    // ChainedHashTable<int> table(n);
 
+    // INSERTION
+    std::cout << "Inserting " << n << " "
+              << (insercion_ordenada ? "ordered" : "random") << " values." << std::endl;
 
-    for (int i = 0; i < n; ++i) {
-        table.insert(i);  // Insertar en orden ascendente
-    }
+    auto start_insert = std::chrono::high_resolution_clock::now();
 
-    /*for (int i = 0; i < n; ++i) {
-        int random_value = std::rand() % range;
-        tree.insert(random_value);
-        // Insert random value into the list
-    } */
-    
-    // Insert random values into the list
+    // 4. "If" structure just for Chained Hash Table
+    /* if (insercion_ordenada) {
+        // Fast insertion of ordered sequence
+        tree.fastInsert(n);
+    } else { */
+        for (int i = 0; i < n; ++i) {
+            int value = insercion_ordenada ? i : std::rand() % range;
 
-    std::chrono::high_resolution_clock::time_point end_insert = std::chrono::high_resolution_clock::now();
-    std::chrono::duration<double> insert_time = end_insert - start_insert;
-    std::cout << "Tiempo de inserción: " << insert_time.count() << " s" << std::endl;
+            // 5. Insert the value into the selected data structure
 
-    // 2. Searches of random values and measure time
-    std::cout << "Se realizan " << o << " búsquedas." << std::endl;
+             lista.insert(value);             // SLList
+            // tree.insert(value);                 // BSTree
+            // rbtree.insert(value);            // RBTree
+            // table.insert(value);             // ChainedHashTable
+        }
+    // }
+    auto end_insert = std::chrono::high_resolution_clock::now();
+    std::cout << "Insertion time: "
+              << std::chrono::duration<double>(end_insert - start_insert).count()
+              << " s\n" << std::endl;
+
+    // SEARCH
+    std::cout << o << " random searches will be performed." << std::endl;
     auto start_search = std::chrono::high_resolution_clock::now();
-
     for (int i = 0; i < o; ++i) {
         int random_value = std::rand() % range;
-        table.search(random_value);
-        //tree.search(tree.getRoot(), random_value);
-        // needs a root node to search 
-        // Search for random_value in the list
+
+        // 6. Uncomment the search method for the selected data structure
+               
+         lista.search(random_value);                  // SLList
+        // tree.search(tree.getRoot(), random_value);     // BSTree
+        // rbtree.search(rbtree.getRoot(), random_value); // RBTree
+        // table.search(random_value);                  // ChainedHashTable
     }
+    auto end_search = std::chrono::high_resolution_clock::now();
+    std::cout << "Total search time: "
+              << std::chrono::duration<double>(end_search - start_search).count()
+              << " s\n" << std::endl;
 
-    std::chrono::high_resolution_clock::time_point end_search = std::chrono::high_resolution_clock::now();
-    std::chrono::duration<double> search_time = end_search - start_search;
-    std::cout << "Tiempo total de búsquedas: " << search_time.count() << " s" << std::endl;
-
-    
-    std::chrono::high_resolution_clock::time_point start_remove = std::chrono::high_resolution_clock::now();
+    // DELETION
+    std::cout << o << " random deletions will be performed." << std::endl;
+    auto start_remove = std::chrono::high_resolution_clock::now();
     for (int i = 0; i < o; ++i) {
         int random_value = std::rand() % range;
-        table.remove(random_value);
-        //tree.remove(random_value);
-        // Remove random value from the list (if it exists)
+
+        // 7. Uncomment the remove method for the selected data structure
+
+         lista.remove(random_value);             // SLList
+        // tree.remove(random_value);               // BSTree
+        // rbtree.remove(random_value);           // RBTree
+        // table.remove(random_value);            // ChainedHashTable
     }
-    std::chrono::high_resolution_clock::time_point end_remove = std::chrono::high_resolution_clock::now();
-    
-    // 3. Removals of random values and measure time
-    std::cout << "Se realizan " << o << " eliminaciones." << std::endl;
-    std::chrono::duration<double> remove_time = end_remove - start_remove;
-    std::cout << "Tiempo total de eliminaciones: " << remove_time.count() << " s" << std::endl;
+    auto end_remove = std::chrono::high_resolution_clock::now();
+    std::cout << "Total deletion time: "
+              << std::chrono::duration<double>(end_remove - start_remove).count()
+              << " s\n" << std::endl;
 
     return 0;
 }

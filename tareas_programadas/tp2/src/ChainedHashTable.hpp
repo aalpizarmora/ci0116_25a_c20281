@@ -29,7 +29,7 @@ class ChainedHashTable {
    * @brief Destructor for the hash table.
    * Automatically cleans up the underlying linked lists.
    */
-  ~ChainedHashTable() {};
+  ~ChainedHashTable();
 
   /**
    * @brief Inserts a value into the hash table if it does not already exist.

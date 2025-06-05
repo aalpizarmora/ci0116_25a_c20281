@@ -1,12 +1,12 @@
 #include "DoublyLinkedList.hpp"
-#include <iostream>  // Optional, in case you want to print for testing
+#include <iostream>  // Opcional, por si quieres imprimir para pruebas
 
-// Node constructor
+// Constructor del nodo
 template <typename DataType>
 DLListNode<DataType>::DLListNode(const DataType& value, DLListNode<DataType>* next, DLListNode<DataType>* prev)
     : key(value), next(next), prev(prev) {}
 
-// Node methods
+// Métodos del nodo
 template <typename DataType>
 DataType DLListNode<DataType>::getKey() const {
     return key;
@@ -37,16 +37,16 @@ void DLListNode<DataType>::setNext(DLListNode<DataType>* next) {
     this->next = next;
 }
 
-// List constructor
+// Constructor de la lista
 template <typename DataType>
 DLList<DataType>::DLList() {
-    // Initialize the sentinel node
+    // Inicializa el nodo sentinela
     nil = new DLListNode<DataType>();
     nil->next = nil;
     nil->prev = nil;
 }
 
-// List destructor
+// Destructor de la lista
 template <typename DataType>
 DLList<DataType>::~DLList() {
     DLListNode<DataType>* current = nil->next;
@@ -58,7 +58,7 @@ DLList<DataType>::~DLList() {
     delete nil;
 }
 
-// Insert at the beginning (after the sentinel)
+// Inserta al inicio (después del sentinela)
 template <typename DataType>
 void DLList<DataType>::insert(const DataType& value) {
     DLListNode<DataType>* newNode = new DLListNode<DataType>(value, nil->next, nil);
@@ -66,7 +66,7 @@ void DLList<DataType>::insert(const DataType& value) {
     nil->next = newNode;
 }
 
-// Search for a node with the given value
+// Busca un nodo con el valor dado
 template <typename DataType>
 DLListNode<DataType>* DLList<DataType>::search(const DataType& value) const {
     DLListNode<DataType>* current = nil->next;
@@ -76,7 +76,7 @@ DLListNode<DataType>* DLList<DataType>::search(const DataType& value) const {
     return (current == nil) ? nullptr : current;
 }
 
-// Remove a node with a specific value
+// Elimina un nodo con un valor específico
 template <typename DataType>
 void DLList<DataType>::remove(const DataType& value) {
     DLListNode<DataType>* current = nil->next;
@@ -92,7 +92,7 @@ void DLList<DataType>::remove(const DataType& value) {
     }
 }
 
-// Remove the given node (assumes it's valid and not nullptr)
+// Elimina el nodo dado (asume que es válido y no nullptr)
 template <typename DataType>
 void DLList<DataType>::remove(DLListNode<DataType>* node) {
     if (node == nullptr || node == nil) return;
@@ -101,13 +101,13 @@ void DLList<DataType>::remove(DLListNode<DataType>* node) {
     delete node;
 }
 
-// Return the sentinel node
+// Devuelve el nodo sentinela
 template <typename DataType>
 DLListNode<DataType>* DLList<DataType>::getNil() const {
     return nil;
 }
 
-// Explicit instantiations for types used in your project
+// Instanciaciones explícitas para tipos usados en tu proyecto
 template class DLListNode<int>;
 template class DLListNode<float>;
 template class DLListNode<double>;
@@ -115,3 +115,4 @@ template class DLListNode<double>;
 template class DLList<int>;
 template class DLList<float>;
 template class DLList<double>;
+

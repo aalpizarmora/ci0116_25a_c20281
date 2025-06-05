@@ -80,12 +80,12 @@ class SLList {
   /**
    * @brief Constructor, initializes an empty list.
    */
-  SLList() = default;
+  SLList();
 
   /**
    * @brief Destructor, releases memory used by the list.
    */
-  ~SLList() {};
+  ~SLList();
 
   /**
    * @brief Inserts a new value into the list.
@@ -114,5 +114,6 @@ class SLList {
   
  private:
   SLListNode<DataType>* nil; /**< Sentinel nil node for the list */
+  void ensureInitialized();
 };
 
