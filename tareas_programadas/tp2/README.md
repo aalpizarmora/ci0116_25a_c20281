@@ -40,7 +40,7 @@ To run this program, follow these steps:
 
 ```bash
 
-  cd ci0116_25a_c20281/tareas_programadas/tp1
+  cd ci0116_25a_c20281/tareas_programadas/tp2
 ```
 
 3. Update the latest changes to the repository.
