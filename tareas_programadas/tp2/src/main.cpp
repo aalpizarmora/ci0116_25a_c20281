@@ -44,7 +44,7 @@ int main() {
 
     auto start_insert = std::chrono::high_resolution_clock::now();
 
-    // 4. "If" structure just for Chained Hash Table
+    // 4. "If" structure just for Binary Search Tree
     /* if (insercion_ordenada) {
         // Fast insertion of ordered sequence
         tree.fastInsert(n);
