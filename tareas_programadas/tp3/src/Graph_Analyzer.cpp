@@ -169,7 +169,7 @@ void GraphAnalyzer::findCenter() const {
 
     if (!centers.empty()) {  
         // Si hay al menos un nodo centro
-        std::cout << "\nLos nodos centro con suma mínima de distancias (" << minSum << ") son:\n";  
+        std::cout << "\nLa ciudad con menor duración (" << minSum << ") hacia las demás es:\n";  
         // Imprime el encabezado con la suma mínima
 
         for (int i : centers) {  
@@ -436,6 +436,4 @@ void GraphAnalyzer::findBestDispatchCity(const std::string& destino) const {
         std::cout << "- " << nodes[index] << '\n';
     }
     std::cout << "\n";
-
 }
-
