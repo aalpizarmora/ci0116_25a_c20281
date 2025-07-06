@@ -326,3 +326,116 @@ void GraphAnalyzer::findClosestCities() const {
     // Restaura el buffer original de cout, vuelve a imprimir en consola
     std::cout.rdbuf(cout_buf);
 }
+
+
+// Ordena las ciudades según el tiempo promedio hacia todas las demás
+void GraphAnalyzer::rankCitiesByAverageDistance() const {
+    ensureFloydComputed();
+    const int INF = std::numeric_limits<int>::max() / 2;
+    const auto& nodes = graph.getNodes();
+    int n = (int)nodes.size();
+    // Cantidad total de ciudades
+
+    std::vector<std::pair<std::string, double>> cityAverages;
+    // Vector para almacenar pares (ciudad, promedio de distancias)
+
+    // Calcula el promedio de distancias desde cada ciudad hacia las demás
+    for (int i = 0; i < n; ++i) {
+        int sum = 0;
+        // Suma acumulada de distancias desde la ciudad i
+        int count = 0;
+        // Cantador de ciudades alcanzables desde la ciudad i
+
+        for (int j = 0; j < n; ++j) {
+            // Solo se consideran distancias finitas y distintas de sí misma
+            if (i != j && distMatrix[i][j] < INF) {
+                sum += distMatrix[i][j];
+                ++count;
+            }
+        }
+
+        // Si hay al menos una ciudad alcanzable, se calcula el promedio
+        if (count > 0) {
+            double avg = static_cast<double>(sum) / count;
+            cityAverages.emplace_back(nodes[i], avg);
+        } else {
+            // Si no hay ciudades alcanzables, se considera el promedio como infinito
+            cityAverages.emplace_back(nodes[i], INF);
+        }
+    }
+
+    // Ordena las ciudades de menor a mayor según el promedio de distancia
+    std::sort(cityAverages.begin(), cityAverages.end(),
+              [](const std::pair<std::string, double>& a, const std::pair<std::string, double>& b) {
+                  return a.second < b.second;
+              });
+    
+    // Imprime el resultado
+    std::cout << "\nCiudades ordenadas por menor tiempo promedio hacia otras:\n";
+    for (const auto& [city, avg] : cityAverages) {
+        if (avg >= INF)
+            std::cout << city << ": INF\n";
+        else
+            std::cout << city << ": " << std::fixed << std::setprecision(2) << avg << "\n";
+    }
+}
+
+// Busca la mejor ciudad para despachar suministros a la ciudad destino
+void GraphAnalyzer::findBestDispatchCity(const std::string& destino) const {
+    ensureFloydComputed();
+
+    const int INF = std::numeric_limits<int>::max() / 2;
+    // Define el valor "infinito" usado como comparación para distancias no alcanzables
+    const auto& nodeIndex = graph.getNodeIndex();
+    // Obtiene el mapa de nombres de nodos a índices
+    const std::vector<std::string>& nodes = graph.getNodes();
+    // Obtiene la lista de nombres de nodos en orden
+
+    // Verifica que la ciudad destino exista en el grafo
+    if (nodeIndex.find(destino) == nodeIndex.end()) {
+        std::cout << "La ciudad '" << destino << "' no existe en el grafo.\n";
+        return;
+    }
+
+    // Obtiene el índice correspondiente a la ciudad destino
+    int destIndex = nodeIndex.at(destino);
+    // Inicializa la menor distancia como infinita
+    int minTime = INF;
+    // Lista para guardar los índices de las ciudades con menor tiempo hacia el destino
+    std::vector<int> bestSources;
+
+    // Recorre todos los nodos y busca el que tenga la menor distancia hasta el destino
+    for (int i = 0; i < (int)nodes.size(); ++i) {
+        if (i == destIndex) continue;
+        // Lista para guardar los índices de las ciudades con menor tiempo hacia el destino
+
+        int distance = distMatrix[i][destIndex];
+        // Lista para guardar los índices de las ciudades con menor tiempo hacia el destino
+        if (distance < minTime) {
+            minTime = distance;
+            bestSources.clear();
+            // Borra candidatos anteriores
+            bestSources.push_back(i);
+            // Agrega nuevo mejor origen
+
+        // Si hay empate en la menor distancia, agrega otro candidato
+        } else if (distance == minTime) {
+            bestSources.push_back(i);
+        }
+    }
+
+    if (minTime == INF) {
+        std::cout << "Ninguna ciudad puede alcanzar a '" << destino << "'.\n";
+        return;
+    }
+
+    std::cout << "Ciudad(es) óptima(s) para despachar suministros a '" << destino 
+              << "' (tiempo mínimo: " << minTime << "):\n";
+
+    for (int index : bestSources) {
+        std::cout << "- " << nodes[index] << '\n';
+    }
+    std::cout << "\n";
+
+}
+
