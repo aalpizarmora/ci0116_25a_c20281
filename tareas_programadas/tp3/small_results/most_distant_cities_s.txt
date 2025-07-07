@@ -1,3 +1,0 @@
-
-Pares de ciudades más distantes con distancia 42:
-Parrita -> Zapotal: Parrita -> Quebradilla -> Puerto Carrillo -> San Juan de Dios -> Mata Redonda -> Zapotal

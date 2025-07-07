@@ -1,6 +1,0 @@
-
-Pares de ciudades más distantes con distancia 12:
-Santiago Oeste -> Alajuela: Santiago Oeste -> Atenas -> Bratsi -> Buenos Aires -> Alajuela
-Santiago Oeste -> Barrantes: Santiago Oeste -> Atenas -> Puerto Viejo -> Tabarcia -> Barrantes
-Santiago Oeste -> Santo Domingo Abajo: Santiago Oeste -> Atenas -> Bratsi -> San Antonio Norte -> Llanuras del Gaspar -> Santo Domingo Abajo
-Santiago Oeste -> Chomes: Santiago Oeste -> Atenas -> Bolsón -> Damas -> Chomes

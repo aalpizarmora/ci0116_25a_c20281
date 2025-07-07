@@ -1,6 +1,0 @@
-Ciudad(es) óptima(s) para despachar suministros a 'Biolley' (tiempo mínimo: 1):
-- Las Horquetas
-- Quepos
-- Colorado
-- Oriental
-
