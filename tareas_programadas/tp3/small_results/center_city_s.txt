@@ -1,0 +1,3 @@
+
+La ciudad con menor duración (87) hacia las demás es:
+ - San Juan de Dios

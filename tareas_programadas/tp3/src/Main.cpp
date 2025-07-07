@@ -7,7 +7,7 @@
  * @return int Código de salida del programa.
  */
 int main() {
-    Menu menu("test/input_small.csv");
+    Menu menu("test/input_large.csv");
     menu.run();
     return 0;
 }

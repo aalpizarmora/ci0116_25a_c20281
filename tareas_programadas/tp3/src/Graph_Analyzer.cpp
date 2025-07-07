@@ -66,7 +66,7 @@ void GraphAnalyzer::ensureFloydComputed() const {
     }
 }
 
-// Imprime la matriz de distancias mínimas calculadas
+/* Imprime la matriz de distancias mínimas calculadas
 void GraphAnalyzer::printDistanceMatrix() const {
     ensureFloydComputed();
     const int INF = std::numeric_limits<int>::max() / 2;
@@ -89,7 +89,7 @@ void GraphAnalyzer::printDistanceMatrix() const {
         }
         std::cout << "\n";
     }
-}
+} */
 
 // Reconstruye la ruta más corta entre dos nodos usando la matriz de predecesores
 std::vector<std::string> GraphAnalyzer::reconstructPath(int u, int v) const {
@@ -167,6 +167,14 @@ void GraphAnalyzer::findCenter() const {
         }
     }
 
+    std::ofstream out("output/center_city.txt");
+    if (!out) {
+        std::cerr << "Error al abrir archivo de salida.\n";
+        return;
+    }
+    std::streambuf* cout_buf = std::cout.rdbuf();
+    std::cout.rdbuf(out.rdbuf());
+
     if (!centers.empty()) {  
         // Si hay al menos un nodo centro
         std::cout << "\nLa ciudad con menor duración (" << minSum << ") hacia las demás es:\n";  
@@ -181,6 +189,7 @@ void GraphAnalyzer::findCenter() const {
         std::cout << "\nNo hay un nodo que alcance a todos los demás.\n";  
         // Si ningún nodo alcanza a todos, imprime mensaje
     }
+    std::cout.rdbuf(cout_buf);
 }
 
 
@@ -369,7 +378,14 @@ void GraphAnalyzer::rankCitiesByAverageDistance() const {
               [](const std::pair<std::string, double>& a, const std::pair<std::string, double>& b) {
                   return a.second < b.second;
               });
-    
+     std::ofstream out("output/city_ranking.txt");
+    if (!out) {
+        std::cerr << "Error al abrir archivo de salida.\n";
+        return;
+    }
+
+    std::streambuf* cout_buf = std::cout.rdbuf();
+    std::cout.rdbuf(out.rdbuf());
     // Imprime el resultado
     std::cout << "\nCiudades ordenadas por menor tiempo promedio hacia otras:\n";
     for (const auto& [city, avg] : cityAverages) {
@@ -378,6 +394,8 @@ void GraphAnalyzer::rankCitiesByAverageDistance() const {
         else
             std::cout << city << ": " << std::fixed << std::setprecision(2) << avg << "\n";
     }
+
+    std::cout.rdbuf(cout_buf);
 }
 
 // Busca la mejor ciudad para despachar suministros a la ciudad destino
@@ -390,6 +408,15 @@ void GraphAnalyzer::findBestDispatchCity(const std::string& destino) const {
     // Obtiene el mapa de nombres de nodos a índices
     const std::vector<std::string>& nodes = graph.getNodes();
     // Obtiene la lista de nombres de nodos en orden
+
+    std::ofstream out("output/best_dispatch_city.txt");
+    if (!out) {
+        std::cerr << "Error al abrir archivo de salida.\n";
+        return;
+    }
+
+    std::streambuf* cout_buf = std::cout.rdbuf();
+    std::cout.rdbuf(out.rdbuf());
 
     // Verifica que la ciudad destino exista en el grafo
     if (nodeIndex.find(destino) == nodeIndex.end()) {
@@ -436,4 +463,5 @@ void GraphAnalyzer::findBestDispatchCity(const std::string& destino) const {
         std::cout << "- " << nodes[index] << '\n';
     }
     std::cout << "\n";
+    std::cout.rdbuf(cout_buf);
 }

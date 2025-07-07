@@ -1,0 +1,491 @@
+
+Ciudades ordenadas por menor tiempo promedio hacia otras:
+Purral: 2.40
+San Rafael Sur: 2.44
+Liberia: 2.45
+San Juan Oeste: 2.45
+Laguna: 2.46
+Sánchez: 2.47
+Lepanto: 2.48
+San Antonio Oeste: 2.48
+Pittier: 2.48
+Orosi: 2.48
+Florencia: 2.49
+San Juan Nuevo: 2.49
+Río Jiménez: 2.49
+San Gabriel: 2.49
+Chomes: 2.50
+Zapote Norte: 2.50
+Biolley: 2.50
+Sarapiquí: 2.50
+Daniel Flores: 2.51
+Reventazón: 2.51
+Pacuarito: 2.51
+San Marcos: 2.52
+Merced: 2.52
+Guayabo: 2.52
+Sarchí Norte: 2.52
+San Jerónimo Abajo: 2.52
+Barva: 2.52
+La Granja: 2.52
+Porozal: 2.52
+Tronadora: 2.53
+Garita: 2.53
+Corredor: 2.53
+San Miguel Viejo: 2.53
+San Roque: 2.53
+Aguas Zarcas: 2.53
+San Jerónimo Arriba: 2.53
+El Mastate: 2.53
+Curubandé: 2.53
+Bratsi: 2.54
+Santa Rita Nuevo: 2.54
+Piedades Sur: 2.54
+Santa Eulalia: 2.54
+Hacienda Vieja: 2.54
+Mercedes Arriba: 2.54
+San Rafael Abajo: 2.55
+Tilarán: 2.55
+Patarrá: 2.55
+Duacarí: 2.55
+San Carlos: 2.55
+Chires: 2.55
+Picagres: 2.55
+Isla del Coco: 2.56
+San Jorge: 2.56
+Porvenir: 2.56
+Paquera: 2.56
+San Nicolás: 2.56
+Cote: 2.56
+Rosario: 2.56
+San Antonio Sur: 2.56
+San Antonio Nuevo: 2.56
+San Diego: 2.56
+Carrizal: 2.56
+Santa Cruz Sur: 2.56
+Cot: 2.56
+Guacimal: 2.56
+Monte Verde: 2.56
+Oriental: 2.56
+San Pedro Viejo: 2.56
+Río Nuevo: 2.56
+Santa Cruz Norte: 2.57
+San Isidro Viejo: 2.57
+Santo Domingo: 2.57
+Palmiralito: 2.57
+Sierpe: 2.57
+Páramo: 2.57
+Carrillos: 2.57
+Cinco Esquinas: 2.57
+Puente de Piedra: 2.57
+Matambú: 2.57
+La Cuesta: 2.57
+Matama: 2.57
+Zapotal Arriba: 2.57
+Buenos Aires: 2.57
+Bahía Drake: 2.57
+Quebrada Honda: 2.57
+San Miguel Sur: 2.57
+Nosara: 2.57
+Cañas Dulces: 2.57
+Savegre: 2.57
+Quepos: 2.57
+Tabarcia: 2.57
+Chirripó: 2.58
+La Amistad: 2.58
+La Unión: 2.58
+Cascajal: 2.58
+San Francisco Arriba: 2.58
+Naranjito: 2.58
+Chánguena: 2.58
+Bolsón: 2.58
+Volcán: 2.58
+Concepción Este: 2.58
+Pacayas: 2.58
+San Isidro Arriba: 2.58
+Jesús María: 2.58
+Rodríguez: 2.58
+San José Abajo: 2.58
+Santa Rita: 2.58
+Tarbaca: 2.58
+San Vicente Norte: 2.58
+Tambor: 2.58
+San Pedro Nuevo: 2.59
+Barranca: 2.59
+Canalete: 2.59
+Río Cuarto: 2.59
+El Cairo: 2.59
+Caño Negro: 2.59
+San Mateo: 2.59
+Desmonte: 2.59
+León XIII: 2.59
+Rita: 2.59
+Sabana Redonda: 2.59
+Atenas: 2.59
+Pocora: 2.59
+Aserrí: 2.59
+Escazú: 2.60
+Guadalupe Este: 2.60
+Peñas Blancas: 2.60
+Monterrey Arriba: 2.60
+Carmen: 2.60
+Santa Rosa Viejo: 2.60
+Jardín: 2.60
+Volio: 2.60
+Esquipulas: 2.60
+Arancibia: 2.60
+San José Viejo: 2.60
+Bagaces: 2.60
+Guadalupe Oeste: 2.60
+Siquirres: 2.60
+San Antonio Arriba: 2.60
+Carmona: 2.60
+Tures: 2.60
+Coyolar: 2.60
+San Isidro Este: 2.60
+Buenavista: 2.60
+La Colonia: 2.60
+Piedades Norte: 2.61
+Varablanca: 2.61
+Cahuita: 2.61
+Llanos de Santa Lucía: 2.61
+Rancho Redondo: 2.61
+Santa Ana: 2.61
+San Juan Este: 2.61
+Palmar: 2.61
+Florida: 2.61
+Jesús Piedad: 2.61
+Tárcoles: 2.61
+Sabanillal: 2.61
+Cóbano: 2.61
+Diriá: 2.61
+Llano Grande: 2.61
+Pilas: 2.61
+Gutiérrez Braun: 2.61
+San Pablo Oeste: 2.61
+Carmencita: 2.62
+San Antonio Viejo: 2.62
+San Rafael Norte: 2.62
+Zarcero: 2.62
+Sámara: 2.62
+Pavón: 2.62
+Tapesco: 2.62
+Mercedes Oeste: 2.62
+La Palmera: 2.62
+San Pablo Arriba: 2.62
+Salitrillos: 2.62
+Calle Blancos: 2.62
+San Juan Grande: 2.62
+San Francisco Norte: 2.62
+La Buenavista: 2.62
+Sierra: 2.62
+San Rafael Arriba: 2.62
+Veintisiete de Abril: 2.62
+Puntarenas: 2.62
+Laurel: 2.62
+San Pablo Abajo: 2.62
+Turrúcares: 2.63
+Batán: 2.63
+La Cruz: 2.63
+Santa Bárbara: 2.63
+Nicoya: 2.63
+Palmiral: 2.63
+Rincón de Sabanilla: 2.63
+Uruca: 2.63
+Chira: 2.63
+Concepción Sur: 2.63
+Damas: 2.63
+Telire: 2.63
+Limoncito: 2.63
+Escobal: 2.63
+Delicias: 2.63
+Cuajiniquil: 2.64
+Dulce Nombre Este: 2.64
+San Isidro Abajo: 2.64
+Dulce Nombre de Jesús: 2.64
+San Josecito Sur: 2.64
+Alegría: 2.64
+Barú: 2.64
+Monte Romo: 2.64
+Sarchí Sur: 2.64
+Limón: 2.64
+Ipís: 2.64
+Frailes: 2.64
+Cureña: 2.64
+Anselmo Llorente: 2.64
+Tacares: 2.64
+Santiago Poás: 2.64
+San Rafael Este: 2.64
+Bolívar: 2.64
+San Juan de Mata: 2.64
+Carara: 2.65
+Brisas: 2.65
+Palmares: 2.65
+Patio de Agua: 2.65
+Birrisito: 2.65
+Orotina: 2.65
+Hojancha: 2.65
+Manzanillo: 2.65
+Mercedes Sur: 2.65
+San Pedro Este: 2.65
+San Pedro Oeste: 2.65
+El Tejar: 2.65
+Bahía Ballena: 2.65
+Los Fortunados: 2.65
+San Isidro de El General: 2.65
+San Jerónimo Este: 2.65
+El Amparo: 2.65
+Llanuras del Gaspar: 2.65
+Sabanilla: 2.65
+Belén de Heredia: 2.65
+Mercedes Abajo: 2.65
+Labrador: 2.66
+San Josecito: 2.66
+Guaitil: 2.66
+Santa María: 2.66
+Los Guido: 2.66
+Guápiles: 2.66
+Cachí: 2.66
+Ulloa: 2.66
+Cariari: 2.66
+Concepción Norte: 2.66
+Paracito: 2.66
+Líbano: 2.66
+Lagunillas: 2.66
+Tucurrique: 2.66
+San José Nuevo: 2.66
+Tres Ríos: 2.66
+San Roque Viejo: 2.66
+San Pablo: 2.66
+Bebedero: 2.66
+Rivas: 2.67
+Curridabat: 2.67
+Upala: 2.67
+Cajón: 2.67
+Gravilias: 2.67
+San Ramón: 2.67
+Tamarindo: 2.67
+Concepción Abajo: 2.67
+Tayutic: 2.67
+Brunka: 2.67
+Palmichal: 2.67
+La Virgen: 2.67
+Grifo Alto: 2.67
+Pital: 2.67
+Cabeceras: 2.67
+Santiago: 2.67
+Zapote: 2.67
+Tobosi: 2.67
+Santa Elena: 2.67
+Nacascolo: 2.68
+San Ramón Nuevo: 2.68
+La Isabel: 2.68
+Golfito: 2.68
+Coloradito: 2.68
+San José de la Montaña: 2.68
+Pejibayes: 2.68
+Santiago Puriscal: 2.68
+San Isidro Nuevo: 2.68
+Tuis: 2.68
+Alajuela: 2.68
+Jesús: 2.68
+San Rafael Oeste: 2.68
+Arenal: 2.68
+Belén de Nosarita: 2.68
+San Lorenzo Arriba: 2.68
+Santa Lucía: 2.69
+San Isidro Sur: 2.69
+Germania: 2.69
+Paraíso: 2.69
+Mercedes Este: 2.69
+Cutris: 2.69
+Aguabuena: 2.69
+Pavones: 2.69
+Dos Ríos: 2.69
+Colorado: 2.69
+Tempate: 2.69
+Hospital: 2.69
+San Isidro Norte: 2.69
+Matina: 2.69
+Desamparaditos: 2.69
+Río Azul: 2.69
+Piedades: 2.69
+San Pedro Norte: 2.69
+San Antonio Abajo: 2.69
+Pará: 2.69
+Jacó: 2.69
+San Ignacio: 2.69
+Barbacoas: 2.69
+San Juan Norte: 2.69
+La Asunción: 2.69
+La Ribera: 2.69
+Potrero Cerrado: 2.70
+Venecia: 2.70
+Cangrejal: 2.70
+Alfaro: 2.70
+Las Juntas: 2.70
+Heredia: 2.70
+Piedras Blancas: 2.70
+San Francisco Abajo: 2.70
+Potrero Grande: 2.70
+Monterrey Abajo: 2.70
+San Joaquín: 2.70
+Santo Tomás: 2.70
+Tres Equis: 2.70
+Buenas Lomas: 2.70
+Sabanillas: 2.70
+Desamparados Sur: 2.71
+Jiménez: 2.71
+Acapulco: 2.71
+Occidental: 2.71
+La Victoria: 2.71
+Santa Teresita: 2.71
+Colima: 2.71
+Cartagena: 2.71
+San Rafael Piedades: 2.71
+Sixaola: 2.71
+Quesada: 2.71
+San Isidro Labrador: 2.71
+San Felipe: 2.72
+Colón: 2.72
+Grecia: 2.72
+Canoas: 2.72
+Puerto Jiménez: 2.72
+San Vito: 2.72
+Concepción Oeste: 2.72
+San Francisco de Dos Ríos: 2.72
+San Juan Sur: 2.72
+San Rafael Viejo: 2.72
+San Antonio Este: 2.72
+San Rafael Parrita: 2.72
+San Juan de Dios: 2.72
+Santa Rosa Nuevo: 2.72
+Santa Cruz: 2.72
+San Lorenzo: 2.72
+San Rafael: 2.73
+San Pedro Antiguo: 2.73
+Tirrases: 2.73
+Chacarita: 2.73
+El General: 2.73
+Mansión: 2.73
+Santa Rosa Abajo: 2.73
+Candelaria: 2.73
+San Cristóbal: 2.73
+Toro Amarillo: 2.73
+Quebradilla: 2.73
+Mayorga: 2.74
+Miramar: 2.74
+Aguacaliente: 2.74
+Palmitos: 2.74
+San Pedro Sur: 2.74
+Capellades: 2.74
+La Ceiba: 2.74
+Juan Viñas: 2.74
+Carrandi: 2.74
+Pocosol: 2.74
+Cabo Velas: 2.74
+Santo Domingo Abajo: 2.74
+Vuelta de Jorco: 2.74
+Guácimo: 2.74
+La Trinidad: 2.74
+Corralillo: 2.74
+Legua: 2.74
+Cervantes: 2.74
+Salitral: 2.75
+San José Arriba: 2.75
+Macacona: 2.75
+Boruca: 2.75
+Aguas Claras: 2.75
+Mogote: 2.75
+Catedral: 2.75
+Tierra Blanca: 2.75
+Dulce Nombre Oeste: 2.75
+La Fortuna: 2.75
+Guadalupe Norte: 2.75
+Mata Redonda: 2.75
+San Vicente: 2.75
+Venado: 2.75
+Llano Bonito: 2.76
+San Juan Abajo: 2.76
+Los Chiles: 2.76
+El Rosario: 2.76
+Platanares: 2.76
+Concepción Arriba: 2.76
+Pavas: 2.76
+Hatillo: 2.76
+Guaycará: 2.76
+Uruca Sur: 2.76
+Cañas: 2.76
+Las Horquetas: 2.76
+Turrialba: 2.76
+Santiago Nuevo: 2.76
+Granadilla: 2.76
+San Juan Arriba: 2.77
+San Antonio Norte: 2.77
+Zapotal: 2.77
+San Miguel Nuevo: 2.77
+Llorente: 2.77
+Sabalito: 2.77
+Candelarita: 2.77
+La Suiza: 2.77
+San Andrés: 2.77
+Colinas: 2.77
+Río Segundo: 2.77
+San José Norte: 2.77
+Peralta: 2.77
+Santa Rosa: 2.77
+Desamparados Norte: 2.77
+San Sebastián: 2.78
+Parrita: 2.78
+Pozos: 2.78
+La Tigra: 2.78
+Espíritu Santo: 2.79
+Palmira: 2.79
+Piedras Negras: 2.79
+Katira: 2.79
+Pejibaye: 2.79
+Huacas: 2.79
+La Garita: 2.79
+Bijagua: 2.79
+Guácima: 2.80
+Puerto Carrillo: 2.80
+Cirrí Sur: 2.80
+Brasil: 2.80
+Quebrada Grande: 2.80
+San Rafael Salvador: 2.80
+Jaris: 2.80
+Alajuelita: 2.80
+Pitahaya: 2.81
+Barrantes: 2.81
+San Isidro Oeste: 2.81
+San Rafael Nuevo: 2.82
+Naranjo: 2.82
+El Roble: 2.82
+San José Este: 2.82
+Quitirrisí: 2.82
+Purabá: 2.82
+Yolillal: 2.83
+Puerto Viejo: 2.83
+Río Blanco: 2.84
+Zaragoza: 2.84
+Patalillo: 2.84
+San Luis: 2.84
+Copey: 2.85
+San Pablo Este: 2.85
+El Ángel: 2.85
+Santa Isabel: 2.85
+Cipreses: 2.86
+Puerto Cortés: 2.86
+Caldera: 2.86
+Mata de Plátano: 2.86
+Río Naranjo: 2.86
+San Miguel: 2.86
+Sardinal: 2.86
+Santa Cecilia: 2.87
+Los Ángeles: 2.89
+Bejuco: 2.90
+Roxana: 2.92
+Valle La Estrella: 2.93
+Filadelfia: 2.95
+Tierras Morenas: 2.97
+Santiago Oeste: 10.59

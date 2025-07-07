@@ -1,0 +1,31 @@
+
+Pares de ciudades más distantes con distancia 12:
+Matina -> Pocora: Matina -> Hojancha -> Santiago Nuevo -> Acapulco -> San Juan Arriba -> Pocora
+Matina -> Bahía Ballena: Matina -> Hojancha -> Pavas -> Veintisiete de Abril -> Barbacoas -> Bahía Ballena
+Matina -> Turrúcares: Matina -> Hojancha -> San Rafael Viejo -> Turrúcares
+Matina -> Duacarí: Matina -> Hojancha -> Río Blanco -> Sarapiquí -> Santa Rosa Viejo -> Duacarí
+Matina -> San Isidro Labrador: Matina -> Hojancha -> Santiago Nuevo -> San Isidro Labrador
+Matina -> Germania: Matina -> Hojancha -> Pejibayes -> Jesús Piedad -> Ulloa -> Germania
+Matina -> Cabo Velas: Matina -> Hojancha -> Santiago Puriscal -> Santa Rosa Nuevo -> Cabo Velas
+Matina -> Las Horquetas: Matina -> Hojancha -> Pavas -> Veintisiete de Abril -> Santa Rosa Abajo -> Las Horquetas
+Matina -> Tres Equis: Matina -> Hojancha -> Santiago Nuevo -> San Jerónimo Arriba -> San José Norte -> Tres Equis
+Matina -> Volcán: Matina -> Hojancha -> Guacimal -> San Rafael Parrita -> Volcán
+Matina -> Puntarenas: Matina -> Hojancha -> Santiago Puriscal -> Puntarenas
+Matina -> Varablanca: Matina -> Hojancha -> Pavas -> Isla del Coco -> La Suiza -> Varablanca
+Matina -> Santo Domingo: Matina -> Hojancha -> Pavas -> Veintisiete de Abril -> Santo Domingo
+Matina -> El Cairo: Matina -> Hojancha -> Pavas -> Veintisiete de Abril -> Santa Rosa Abajo -> El Cairo
+Matina -> Porvenir: Matina -> Hojancha -> Santiago Nuevo -> San Jerónimo Arriba -> San José Norte -> Porvenir
+Matina -> Paquera: Matina -> Hojancha -> Pavas -> Paquera
+Matina -> San Carlos: Matina -> Hojancha -> Pavas -> Isla del Coco -> San Carlos
+Matina -> Legua: Matina -> Hojancha -> Pavas -> Veintisiete de Abril -> Santiago -> Legua
+Matina -> Chires: Matina -> Hojancha -> Santiago Nuevo -> Aguas Claras -> Río Azul -> Chires
+Matina -> La Victoria: Matina -> Hojancha -> Río Blanco -> Granadilla -> La Victoria
+Matina -> San Rafael Oeste: Matina -> Hojancha -> Río Blanco -> Los Guido -> Chomes -> San Rafael Oeste
+Matina -> Venado: Matina -> Hojancha -> Pavas -> Isla del Coco -> Puerto Carrillo -> Venado
+Matina -> San Rafael Norte: Matina -> Hojancha -> Hacienda Vieja -> San Rafael Norte
+Matina -> Aguas Zarcas: Matina -> Hojancha -> Santiago Nuevo -> Acapulco -> San Juan Arriba -> Aguas Zarcas
+Matina -> Siquirres: Matina -> Hojancha -> Santiago Nuevo -> Palmiralito -> Cirrí Sur -> Siquirres
+Matina -> Diriá: Matina -> Hojancha -> Santiago Nuevo -> Laguna -> Nosara -> Diriá
+Matina -> San Rafael Sur: Matina -> Hojancha -> Río Blanco -> Los Guido -> San Rafael Sur
+Matina -> Pocosol: Matina -> Hojancha -> Río Blanco -> Canalete -> Pocosol
+Matina -> La Colonia: Matina -> Hojancha -> Río Blanco -> La Colonia

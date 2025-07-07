@@ -1,0 +1,4 @@
+
+Pares de ciudades más cercanas con distancia 2:
+San Juan de Dios -> Quebradilla: San Juan de Dios -> Quebradilla
+San Juan de Dios -> Mata Redonda: San Juan de Dios -> Mata Redonda
